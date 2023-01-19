@@ -1,62 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230118 15:51:05.193" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo11 Advance" source="C:\Users\40032464\PycharmProjects\Robot_Project\selinium_suit\demo11_advance.robot">
-<test id="s1-t1" name="TC2" line="13">
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230119 11:15:44.917" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo10 Action" source="C:\Users\40032464\PycharmProjects\Robot_Project\selinium_suit\demo10_action.robot">
+<test id="s1-t1" name="TC1" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230118 15:51:05.587" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230118 15:51:05.587" endtime="20230118 15:51:07.413"/>
+<msg timestamp="20230119 11:15:45.302" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230119 11:15:45.302" endtime="20230119 11:15:47.256"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230118 15:51:07.414" endtime="20230118 15:51:07.564"/>
+<status status="PASS" starttime="20230119 11:15:47.256" endtime="20230119 11:15:47.398"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>30s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230118 15:51:07.564" endtime="20230118 15:51:07.568"/>
+<status status="PASS" starttime="20230119 11:15:47.399" endtime="20230119 11:15:47.403"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https:/www.facebook.com/</arg>
+<arg>url=https://nasscom.in</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230118 15:51:07.569" level="INFO">Opening url 'https:/www.facebook.com/'</msg>
-<status status="PASS" starttime="20230118 15:51:07.568" endtime="20230118 15:51:11.286"/>
+<msg timestamp="20230119 11:15:47.403" level="INFO">Opening url 'https://nasscom.in'</msg>
+<status status="PASS" starttime="20230119 11:15:47.403" endtime="20230119 11:16:09.634"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>css=#email</arg>
-<arg>jack</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230118 15:51:11.286" level="INFO">Typing text 'jack' into text field 'css=#email'.</msg>
-<status status="PASS" starttime="20230118 15:51:11.286" endtime="20230118 15:51:11.389"/>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ele}</var>
+<arg>xpath=//a[text()='Members Listing']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230119 11:16:09.661" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="97569e9eaeefb030f31df3da80a76378", element="58275782-64fe-4e16-b405-218563cb07f4")&gt;</msg>
+<status status="PASS" starttime="20230119 11:16:09.635" endtime="20230119 11:16:09.661"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>css=#pass</arg>
-<arg>12365</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230118 15:51:11.389" level="INFO">Typing password into text field 'css=#pass'.</msg>
-<msg timestamp="20230118 15:51:11.449" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230118 15:51:11.532" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230118 15:51:11.389" endtime="20230118 15:51:11.532"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20230119 11:16:09.661" level="INFO">Executing JavaScript:
+arguments[0].click()
+Without any arguments.</msg>
+<msg timestamp="20230119 11:16:10.167" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230119 11:16:10.175" level="FAIL">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=109.0.5414.75)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00B86643]
+	(No symbol) [0x00B1BE21]
+	(No symbol) [0x00A1DA9D]
+	(No symbol) [0x00A209E4]
+	(No symbol) [0x00A208AD]
+	(No symbol) [0x00A212E5]
+	(No symbol) [0x00A879F7]
+	(No symbol) [0x00A6FD7C]
+	(No symbol) [0x00A86B09]
+	(No symbol) [0x00A6FB76]
+	(No symbol) [0x00A449C1]
+	(No symbol) [0x00A45E5D]
+	GetHandleVerifier [0x00DFA142+2497106]
+	GetHandleVerifier [0x00E285D3+2686691]
+	GetHandleVerifier [0x00E2BB9C+2700460]
+	GetHandleVerifier [0x00C33B10+635936]
+	(No symbol) [0x00B24A1F]
+	(No symbol) [0x00B2A418]
+	(No symbol) [0x00B2A505]
+	(No symbol) [0x00B3508B]
+	BaseThreadInitThunk [0x76DCFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77577BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77577B8E+238]
+</msg>
+<status status="FAIL" starttime="20230119 11:16:09.661" endtime="20230119 11:16:10.183"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>css=button[name='login']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230118 15:51:11.534" level="INFO">Clicking element 'css=button[name='login']'.</msg>
-<status status="PASS" starttime="20230118 15:51:11.532" endtime="20230118 15:51:11.633"/>
-</kw>
-<status status="PASS" starttime="20230118 15:51:05.587" endtime="20230118 15:51:11.635"/>
+<status status="FAIL" starttime="20230119 11:15:45.302" endtime="20230119 11:16:10.183">JavascriptException: Message: javascript error: Cannot read properties of undefined (reading 'click')
+  (Session info: chrome=109.0.5414.75)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00B86643]
+	(No symbol) [0x00B1BE21]
+	(No symbol) [0x00A1DA9D]
+	(No symbol) [0x00A209E4]
+	(No symbol) [0x00A208AD]
+	(No symbol) [0x00A212E5]
+	(No symbol) [0x00A879F7]
+	(No symbol) [0x00A6FD7C]
+	(No symbol) [0x00A86B09]
+	(No symbol) [0x00A6FB76]
+	(No symbol) [0x00A449C1]
+	(No symbol) [0x00A45E5D]
+	GetHandleVerifier [0x00DFA142+2497106]
+	GetHandleVerifier [0x00E285D3+2686691]
+	GetHandleVerifier [0x00E2BB9C+2700460]
+	GetHandleVerifier [0x00C33B10+635936]
+	(No symbol) [0x00B24A1F]
+	(No symbol) [0x00B2A418]
+	(No symbol) [0x00B2A505]
+	(No symbol) [0x00B3508B]
+	BaseThreadInitThunk [0x76DCFEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77577BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77577B8E+238]
+</status>
 </test>
-<status status="PASS" starttime="20230118 15:51:05.202" endtime="20230118 15:51:11.635"/>
+<status status="FAIL" starttime="20230119 11:15:44.917" endtime="20230119 11:16:10.183"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo11 Advance">Demo11 Advance</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo10 Action">Demo10 Action</stat>
 </suite>
 </statistics>
 <errors>

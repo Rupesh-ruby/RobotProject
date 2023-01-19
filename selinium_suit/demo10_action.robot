@@ -8,8 +8,8 @@ TC1
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Go To    url=https://nasscom.in
-    Mouse Over    xpath=//a[tex()='Membership']
-    Click Element    xpath=//a[text()='Members Listing']
+    ${ele}  Get WebElement    xpath=//a[text()='Members Listing']
+    Execute Javascript  arguments[0].click()
 
 TC2
    Open Browser    browser=chrome
