@@ -3,6 +3,7 @@ Library         OperatingSystem
 *** Test Cases ***
 
 TC1
+    [Documentation]     #working with demo
     Create Dictionary   path=C:\\mine\\demo123
 
 TC2
