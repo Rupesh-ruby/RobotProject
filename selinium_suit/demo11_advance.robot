@@ -3,6 +3,7 @@ Library      SeleniumLibrary
 
 *** Test Cases ***
 TC1
+    [Documentation]     #working with advance
     Open Browser   browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    30s

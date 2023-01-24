@@ -4,6 +4,7 @@ Library     XML
 *** Test Cases ***
 
 TC1
+    [Documentation]     #working with sale robot
     Open Browser   browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    30s

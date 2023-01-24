@@ -4,6 +4,7 @@ Library    XML
 
 *** Test Cases ***
 TC1
+    [Documentation]     #working with Selinium suit
     Open Browser   url=https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Open%20Browser   browser=chrome
     ${actual_title}   Get Title
     Log To Console    ${actual_title}
