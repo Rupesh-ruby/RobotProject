@@ -1,6 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
-Library    XML
+
 
 *** Test Cases ***
 TC1
@@ -27,3 +27,11 @@ TC4
     Input Text    id:input_username    hello@gmail.com
     Input Password    id:input_password    Rupesh0412@
     Click Element    id:input_go
+
+TC5
+    Open Browser    browser=chrome
+    @{output}       Run Keyword And Ignore Error    Click Element    xpath=//a
+    Log To Console    ${output}
+    Log To Console    ${output}[0]
+    Log To Console    ${output}[1]
+    Log     ${output}

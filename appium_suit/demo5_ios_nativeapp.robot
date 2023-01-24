@@ -46,4 +46,8 @@ TC1
     ${app_source}           Get Source
     Log        ${app_source}
     [Teardown]      Close Application
+    
+
+TC2
+    Open Application    remote_url=
 
